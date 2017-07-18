@@ -10,15 +10,36 @@ DIRECTORIO
 usuario@maquina:~$ pwd
 /home/usuario
 
-CREAR CLAVE PC ORIGEN
-home/user>ssh keygen -t rsa
-
 MAQUINA
 home/user>mkdir .ssh
 home/user>chmod 700 .ssh
 home/user/.shh>vi authorized_keys
 home/user/.shh>chmod 600 authorized_keys				GUARDAMOS LA .pub DEL PC ORIGEN
 
-
 RECARGAR MAQUINA
 sudo /etc/init.d/sshd reload
+
+CREAR CLAVE PC ORIGEN
+home/user>ssh keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Created directory '/home/user/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/user/.ssh/id_rsa.
+Your public key has been saved in /home/user/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:SPLtEK+wpzToRV/e5o+hqbWZrPDo6QM3t91ISgT86no user@PC
+The key's randomart image is:
++---[RSA 2048]----+
+|   .             |
+|    o            |
+|    .oo          |
+|     +o=         |
+|    oo+ S        |
+|  .o++o*..       |
+|  .+*++=+o+      |
+| . oEOoooO.o     |
+|  o=*.+oB o..    |
++----[SHA256]-----+
+
