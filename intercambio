@@ -19,7 +19,12 @@ home/user/.shh>chmod 600 authorized_keys				GUARDAMOS LA .pub DEL PC ORIGEN
 RECARGAR MAQUINA
 sudo /etc/init.d/sshd reload
 
-CREAR CLAVE PC ORIGEN
+CREAR CLAVES
+ssh-keygen -t rsa
+ssh-keygen -t dsa
+ssh-keygen -t ecdsa
+
+EJEMPLO CLAVE PC ORIGEN
 home/user>ssh keygen -t rsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/user/.ssh/id_rsa):
