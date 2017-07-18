@@ -10,6 +10,9 @@ DIRECTORIO
 usuario@maquina:~$ pwd
 /home/usuario
 
+CREAR CLAVE PC ORIGEN
+home/user>ssh keygen -t rsa
+
 MAQUINA
 home/user>mkdir .ssh
 home/user>chmod 700 .ssh
