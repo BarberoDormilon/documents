@@ -1,0 +1,21 @@
+PERMISOS
+  u   g	  o
+rwx rwx rwx
+111	000	000
+  7	  0	  0
+110	000	000
+  6	  0	  0
+
+DIRECTORIO
+usuario@maquina:~$ pwd
+/home/usuario
+
+MAQUINA
+home/user>mkdir .ssh
+home/user>chmod 700 .ssh
+home/user/.shh>vi authorized_keys
+home/user/.shh>chmod 600 authorized_keys				GUARDAMOS LA .pub DEL PC ORIGEN
+
+
+RECARGAR MAQUINA
+sudo /etc/init.d/sshd reload
