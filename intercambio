@@ -19,8 +19,8 @@ MAQUINA
       home/user>mkdir .ssh
       home/user>chmod 700 .ssh
       home/user/.shh>vi authorized_keys
-      home/user/.shh>chmod 600 authorized_keys				        GUARDAMOS LA .pub DEL PC ORIGEN
-      home/user/.shh>sudo /etc/init.d/sshd reload             RECARGAR MAQUINA
+      home/user/.shh>chmod 600 authorized_keys                  "GUARDAMOS LA .pub DEL PC ORIGEN"
+      home/user/.shh>sudo /etc/init.d/sshd reload               "RECARGAR MAQUINA"
 
 EJEMPLO CREAR CLAVE PC ORIGEN
       home/user>ssh keygen -t rsa
