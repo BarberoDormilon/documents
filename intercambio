@@ -1,10 +1,10 @@
 PERMISOS
-        u   g	  o
-      rwx rwx rwx
-      111	000	000
-        7	  0	  0
-      110	000	000
-        6	  0	  0
+        u    g	  o
+      rwx  rwx  rwx
+      111  000  000
+        7    0	  0
+      110  000	000
+        6    0	  0
 
 DIRECTORIO
       usuario@maquina:~$ pwd
