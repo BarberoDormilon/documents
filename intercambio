@@ -15,12 +15,12 @@ CREAR CLAVES
       ssh-keygen -t dsa
       ssh-keygen -t ecdsa
 
-MAQUINA
+SERVIDOR
       home/user>mkdir .ssh
       home/user>chmod 700 .ssh
       home/user/.shh>vi authorized_keys
       home/user/.shh>chmod 600 authorized_keys                  "GUARDAMOS LA .pub DEL PC ORIGEN"
-      home/user/.shh>sudo /etc/init.d/sshd reload               "RECARGAR MAQUINA"
+      home/user/.shh>sudo /etc/init.d/sshd reload               "RECARGAR"
 
 EJEMPLO CREAR CLAVE PC ORIGEN
       home/user>ssh keygen -t rsa
@@ -66,4 +66,11 @@ EJEMPLO CONTENIDO DE UNA CLAVE
         home/user/.ssh> cat id_rsa.pub
         ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAlAOZqzytzqvUPPiT11b0byVxES24ttZlwTe8cUvodSrJMMxrgqnp5+yj7qZhDiGN2rPNLlmznrWwNyiH295+Iv/antaI/cp/02Qi2bTDh8YbtUfEA43GBkXxmlIlQaim/NUA5IfsC06F1vagYWrcC8mQJrjiWW+echR2X7ADbYsBN8BoCB3ysL3aYqglJd8OnXkISsvNNXLg3+9BYrSbEZhTBuVXU8NSJWcvDEDNFblYeCayoPXdw5I/U9AyUZJEzD0jUyT73LhgvrovwB/VkpS7GldqSKcC5jCNFEWwoWjH9QDKuYnqNENFfnVwsP3SY91PAs5M3xN/EqgXtIE5UQ== user@maquina
 
+You need to change the sshd_config file in the remote server (probably in /etc/ssh/sshd_config).
 
+Change
+PasswordAuthentication no
+to
+PasswordAuthentication yes
+
+And then restart the sshd daemon.
