@@ -66,6 +66,9 @@ EJEMPLO CONTENIDO DE UNA CLAVE
         home/user/.ssh> cat id_rsa.pub
         ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAlAOZqzytzqvUPPiT11b0byVxES24ttZlwTe8cUvodSrJMMxrgqnp5+yj7qZhDiGN2rPNLlmznrWwNyiH295+Iv/antaI/cp/02Qi2bTDh8YbtUfEA43GBkXxmlIlQaim/NUA5IfsC06F1vagYWrcC8mQJrjiWW+echR2X7ADbYsBN8BoCB3ysL3aYqglJd8OnXkISsvNNXLg3+9BYrSbEZhTBuVXU8NSJWcvDEDNFblYeCayoPXdw5I/U9AyUZJEzD0jUyT73LhgvrovwB/VkpS7GldqSKcC5jCNFEWwoWjH9QDKuYnqNENFfnVwsP3SY91PAs5M3xN/EqgXtIE5UQ== user@maquina
 
+BUSCAR
+        user@pc-user:/home> find . -name "*.txt"                --> todos los archivos txt
+
 PROBLEMA 1
         Cambiar sshd_config fichero del servidor (ruta: /etc/ssh/sshd_config).
                 Change
