@@ -16,6 +16,7 @@ CREAR CLAVES
       ssh-keygen -t ecdsa
 
 SERVIDOR
+      home/user>chmod 755 /home/user  
       home/user>mkdir .ssh
       home/user>chmod 700 .ssh
       home/user/.shh>vi authorized_keys
