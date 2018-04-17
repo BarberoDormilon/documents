@@ -23,7 +23,20 @@ SERVIDOR
       home/user>chmod 700 .ssh
       home/user/.shh>vi authorized_keys
       home/user/.shh>chmod 600 authorized_keys                  "GUARDAMOS LA .pub DEL PC ORIGEN"
+      RELOAD 2
       home/user/.shh>sudo /etc/init.d/sshd reload               "RECARGAR"
+      home/user/.shh>sudo service sshd restart                  "RECARGAR"
+      CentOS / RHEL / Fedora / Redhat Linux Restart SSH
+        # /etc/init.d/sshd restart
+                OR
+        # service sshd restart
+      Debian / Ubuntu Linux Restart SSH
+        # /etc/init.d/ssh restart
+                OR
+        # service ssh restart
+                OR
+        # sudo service ssh restart
+      
 
 EJEMPLO CREAR CLAVE PC ORIGEN
       home/user>ssh keygen -t rsa
@@ -80,6 +93,7 @@ PROBLEMA 1
         PasswordAuthentication yes
         
         Recargar
+                home/user/.shh>sudo service sshd restart
                 home/user/.shh>sudo /etc/init.d/sshd reload
 PROBLEMA 2
         No deja copiar Servidor a Equipo(Rehecho)
